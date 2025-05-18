@@ -25,7 +25,8 @@ app.post('/create-checkout-session', async (req, res) => {
     metadata: { userId }
   });
 
-  res.send({ id: session.id });
+  res.send({ checkoutUrl: session.url });
+
 });
 
 // Stripe webhook to handle subscription status (optional)
